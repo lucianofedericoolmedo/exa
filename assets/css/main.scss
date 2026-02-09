@@ -1,0 +1,119 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* ==========================================================================
+   Custom overrides - verde clorofila
+   ========================================================================== */
+
+/* Verde clorofila - paleta base */
+$clorofila-oscuro: #1b4332;
+$clorofila: #2d6a4f;
+$clorofila-medio: #40916c;
+$clorofila-claro: #52b788;
+$clorofila-muy-claro: #74c69d;
+$clorofila-pastel: #95d5b2;
+$clorofila-sutil: #b7e4c7;
+$clorofila-fondo: #d8f3dc;
+
+/* Páginas - variantes claras de clorofila */
+html {
+  background: $clorofila-fondo;
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+}
+
+/* Área de contenido - variantes claras de clorofila */
+#main,
+.sidebar,
+.initial-content,
+.page__inner-wrap,
+.archive {
+  background: $clorofila-fondo !important;
+}
+
+.sidebar .author__content {
+  background: rgba($clorofila-sutil, 0.6) !important;
+}
+
+/* Header - verde clorofila */
+.masthead,
+.greedy-nav {
+  background: $clorofila !important;
+  border-color: rgba($clorofila-oscuro, 0.2) !important;
+}
+
+.greedy-nav a,
+.greedy-nav .site-title {
+  color: #fff !important;
+}
+
+.greedy-nav a:hover {
+  color: $clorofila-fondo !important;
+}
+
+.greedy-nav .hidden-links {
+  background: $clorofila-medio !important;
+  border-color: rgba($clorofila-oscuro, 0.3) !important;
+}
+
+.greedy-nav .hidden-links a {
+  color: #fff !important;
+}
+
+.greedy-nav .hidden-links a:hover {
+  color: $clorofila-fondo !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.greedy-nav .navicon,
+.greedy-nav .navicon::before,
+.greedy-nav .navicon::after {
+  background: #fff !important;
+}
+
+.greedy-nav__toggle:hover .navicon,
+.greedy-nav__toggle:hover .navicon::before,
+.greedy-nav__toggle:hover .navicon::after {
+  background: $clorofila-fondo !important;
+}
+
+/* Footer - verde clorofila */
+.page__footer {
+  background: $clorofila !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.page__footer a {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.page__footer a:hover {
+  color: #fff !important;
+}
+
+.page__footer .fas,
+.page__footer .fab,
+.page__footer .far,
+.page__footer .fal {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Post images - controlled size */
+.post-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 4px;
+}
